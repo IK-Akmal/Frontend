@@ -19,7 +19,7 @@
             current++;
         }, 1000)
     }
-    printNumbers(3,5)
+    printNumbers(3,5);
 }
 {
     function printNumbers(from, to) {
@@ -33,7 +33,7 @@
             current++;
         }, 1000)
     }
-    printNumbers(3,5)
+    printNumbers(3,5);
 }
 
 //---------------------------------------------------------------------------------------
