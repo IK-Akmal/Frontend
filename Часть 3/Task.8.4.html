@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .icon {
+            width: 16px;
+            height: 16px;
+            float: left;
+        }
+
+        .open .icon {
+            cursor: pointer;
+            background-color: black;
+        }
+
+        .closed .icon {
+            cursor: pointer;
+            background-color: green;
+        }
+
+        .leaf .icon {
+            cursor: text;
+            background-color: red;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .text {
+            margin: 6px 0 6px 16px;
+        }
+
+
+        /* ------------------------------------ */
+
+        .navigation {
+            height: 40px;
+            width: 50%;
+            margin: auto;
+        }
+
+        .navigation .left {
+            float: left;
+            cursor: pointer;
+        }
+
+        .navigation .right {
+            float: right;
+            cursor: pointer;
+        }
+
+        .navigation .pages {
+            list-style: none;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navigation .pages li {
+            display: inline;
+            margin: 0 3px;
+            cursor: pointer;
+        }
+
+
+
+        /* -------------------------------------- */
+
+        .left-column {
+            float: left;
+            width: 30%;
+            background: #aef;
+        }
+
+        .right-column {
+            float: right;
+            width: 70%;
+            background: tan;
+
+            box-sizing: border-box;
+            border-left: 2px solid green;
+            padding-left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <!-- Галерея изображений состоит из картинок в рамках с подписями (возможно, с другой дополнительной информацией).
+
+        Технически вывод такой галереи можно реализовать при помощи списка UL/LI, где:
+
+        1. каждый LI имеет display:inline-block
+        2. каждый LI имеет float:left
+
+
+        Какие различия между этими подходами? Какой вариант выбрали бы вы?
+
+        Ответ:
+        В первую очередь она в том, что inline-block продолжают участвовать в потоке, а float – нет. -->
+
+    <!-- ------------------------------------------------------------------------------------------ -->
+
+
+    <!-- 
+        Сделайте дерево при помощи семантической вёрстки и CSS-спрайта с иконками (есть готовый).
+        - Поддержка многострочных названий узлов
+        - Над иконкой курсор становится указателем.
+        Исходный документ содержит список UL/LI и ссылку на картинку.
+
+        P.S. Достаточно сделать HTML/CSS-структуру, действия добавим позже. 
+    -->
+
+    <ul>
+        <li class="open">
+            <div class="icon"></div>
+            <div class="text">Раздел 1
+                <br>(занимает две строки)
+            </div>
+            <ul>
+                <li class="closed">
+                    <div class="icon"></div>
+                    <div class="text">Раздел 1.1</div>
+                </li>
+                <li class="leaf">
+                    <div class="icon"></div>
+                    <div class="text">Страница 1.2
+                        <br>(занимает две строки)
+                    </div>
+                </li>
+            </ul>
+        </li>
+        <li class="closed">
+            <div class="icon"></div>
+            <div class="text">Раздел 2
+                <br>(занимает две строки)
+            </div>
+        </li>
+    </ul>
+    <!-- ------------------------------------------------------------------------------------------ -->
+
+    <!-- Оформите навигацию, центрированную внутри DIV'а: -->
+
+    <!-- 
+            Требования:
+
+        Левая стрелка – слева, правая – справа, список страниц – по центру.
+        Список страниц центрирован вертикально.
+        Текст сверху и снизу ни на что не наползает.
+        Курсор при наведении на стрелку или элемент списка становится стрелкой pointer.
+        P.S. Без использования таблиц. 
+    -->
+    <span>Текст Сверху</span>
+    <div class="navigation">
+        <button class="left">Назад</button>
+        <button class="right">Вперед</button>
+        <ul class="pages">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+            <li>9</li>
+        </ul>
+
+    </div>
+    <span>Текст Снизу</span>
+
+    <!-- ------------------------------------------------------------------------------ -->
+
+
+    <div>
+        <div class="left-column">
+            Левая<br>Колонка
+        </div>
+        <div class="right-column">
+            Правая<br>Колонка<br>...
+        </div>
+    </div>
+</body>
+
+</html>
