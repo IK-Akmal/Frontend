@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #field {
+            width: 200px;
+            border: 10px groove black;
+            background-color: #00FF00;
+            position: relative;
+        }
+
+        #ball {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-left: -20px;
+            margin-top: -20px;
+        }
+
+
+        .popup {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .popup__content {
+            padding: 20px;
+            background-color: white;
+        }
+
+        .popup__title {
+            text-align: center;
+        }
+
+        .popup__form {
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+            gap: 6px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="field">
+        <img src="https://js.cx/clipart/ball.svg" id="ball"> . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+        . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+        . . . . . . . . . . .
+        . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+        . . . . . . . . . . . . . . . . . . . . . .
+    </div>
+
+    <!-- ------------------------------------------------------------------------------ -->
+
+
+    <!-- Создайте при помощи HTML/CSS форму для логина в модальном окне. -->
+
+    <div class="popup">
+        <div class="popup__content">
+            <h3 class="popup__title">Добро пожаловать! </h3>
+            <form class="popup__form" action="#">
+                <label for="name">Name:</label>
+                <input id="name" name="name" type="text">
+                <label for="pass">Password:</label>
+                <input id="pass" name="password" type="password">
+                <button type="submit">Войти</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- ------------------------------------------------------------------------------ -->
+
+</body>
+
+</html>
