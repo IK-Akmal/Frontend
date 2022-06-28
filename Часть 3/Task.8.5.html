@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .backdrop {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 999;
+            background-color: rgba(145, 107, 107, 0.7);
+            filter: blur(14px);
+        }
+    </style>
+
+</head>
+
+<body style="height: 2000px">
+
+    <!-- 
+        Модальное окно
+    важность: 5
+    Создайте при помощи HTML/CSS «модальное окно», то есть DIV, который полностью перекрывает документ и находится над
+    ним.
+
+    При этом все элементы управления на документе перестают работать, т.к. клики попадают в DIV.
+
+    В примере ниже DIV'у дополнительно поставлен цвет фона и прозрачность, чтобы было видно перекрытие: -->
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, magnam natus exercitationem pariatur soluta ad
+        enim tempora, molestiae, ipsam minima necessitatibus dolore harum doloribus officiis sint sit numquam fugit.
+        Earum.</p>
+
+    <button>1234</button>
+    <button>1234</button>
+    <button>1234</button>
+
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, magnam natus exercitationem pariatur soluta ad
+        enim tempora, molestiae, ipsam minima necessitatibus dolore harum doloribus officiis sint sit numquam fugit.
+        Earum.</p>
+
+
+    <div class="backdrop">
+
+    </div>
+</body>
+
+</html>
